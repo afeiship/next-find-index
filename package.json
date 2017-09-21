@@ -1,6 +1,6 @@
 {
   "name": "next-find-index",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "This method is like `.find` except that it returns the index of the first element.",
   "homepage": "https://github.com/afeiship/next-find-index",
   "author": {

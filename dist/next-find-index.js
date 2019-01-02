@@ -3,12 +3,15 @@
   var nx = global.nx || require('next-js-core2');
 
   nx.findIndex = function(inArray, inCallback) {
-    for (var index = 0; index < inArray.length; index++) {
-      var element = inArray[index];
-      if (inCallback.call(inArray, index, element)) {
-        return index;
+    var index = -1;
+    for (var i = 0; i < inArray.length; i++) {
+      var element = inArray[i];
+      if (inCallback.call(inArray, i, element)) {
+        index = i;
+        break;
       }
     }
+    return index;
   };
 
   if (typeof module !== 'undefined' && module.exports) {
